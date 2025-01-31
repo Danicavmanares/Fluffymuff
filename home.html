@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluffyMuff</title>
+    <link rel="shortcut icon" type="image" href="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527ELFYXIBIRT3YBBISSJEMBWE4BIO%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxNzM2MDAifQ.phoFdYqpLxbAtTg8-xvlGKk4fFUxTc_ujavTFs0D-alQa1JRBgfwphE9dxI1qSMFQQmoejJBC7zhn2BR-lz5hltk2FbYGIaFBJhHUnIFex0aRtzz64UBAg9h2x2f1efP5hYO0qFFhZibFj_yAuEbvgHPcTchtrDHhMbkaclJiQ1ilSILf2nr1ulWql1rDIBS-5uS8o64QqSVWZmExiT6XmY0VMOnbbRlmqvE_XZcC8JnhaAirj44jSAhhJKWaAaCpNTMNZDfXNsZQUyJjYJtlgagHXOSw3Ud77v4fxn0aXShQEQ7VoNmA-5XUUwIAUbsya3GvARFgnZRJiXi1-OS0idiGN7Rqw5nP7qHYHUGxuhzqW32XUWQ0GLtGJd0363x.LTBTMm9FEzzFW41u_g_SywVcr4T2wZhL1JUegX3wuDw%26version%3DPublished&cb=63873709257&encodeFailures=1&width=666&height=375">
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+    <!-- icons links -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- icons links -->
+    <!-- animation links -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- animation links -->
+</head>
+<body>
+    <div class="all-content">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md" id="navbar">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#" id="logo"><img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527ELFYXIBIRT3YBBISSJEMBWE4BIO%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxNzM2MDAifQ.phoFdYqpLxbAtTg8-xvlGKk4fFUxTc_ujavTFs0D-alQa1JRBgfwphE9dxI1qSMFQQmoejJBC7zhn2BR-lz5hltk2FbYGIaFBJhHUnIFex0aRtzz64UBAg9h2x2f1efP5hYO0qFFhZibFj_yAuEbvgHPcTchtrDHhMbkaclJiQ1ilSILf2nr1ulWql1rDIBS-5uS8o64QqSVWZmExiT6XmY0VMOnbbRlmqvE_XZcC8JnhaAirj44jSAhhJKWaAaCpNTMNZDfXNsZQUyJjYJtlgagHXOSw3Ud77v4fxn0aXShQEQ7VoNmA-5XUUwIAUbsya3GvARFgnZRJiXi1-OS0idiGN7Rqw5nP7qHYHUGxuhzqW32XUWQ0GLtGJd0363x.LTBTMm9FEzzFW41u_g_SywVcr4T2wZhL1JUegX3wuDw%26version%3DPublished&cb=63873709257&encodeFailures=1&width=666&height=375" alt="" width="110px">FluffyMuff</a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span><img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EN32DFWYCY6DVGJHMWORLP3BEXI%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxNzM2MDAifQ.WehSDakxWm6Z_gKlfxxSD2uTor31JdTYZiPS7SbLgViewwHRhVwYQBSjccxh_-qx6iTT7nTwfjnifclHUgxoZ2HKctt-78qDdoLjFyIXdJkrTJ4jo7_DDeGySTXlQcrRwLLlTo2VN5_ck5ZITcg988qAnUNdtC55Z-0Ln4-UlIBgjNlW5lrsFy0VNzYvZRMSav9rZXahErk_-k1vTC968H_yAzgOyHKOWMozkbvZqxhIRTiotEmLFDCyHAVBiF6FSxGB-y9F5n6rlCZQ3fIuO95s3jcUGImDOcDaYAhxYkbRefIdg9x0CrSXJ8MLqIbXGmRBOCmOmwuq79PgAVIpYEq1BQJKBrr7P8e12GCLeCqB32aVwlPuaMVVXBWQYJs4.3qwWL9pUeoDMluFh71rAOgptHVE1GC94ZaepDwQ0oos%26version%3DPublished&cb=63873709332&encodeFailures=1&width=50&height=50" alt="" width="30px"></span>
+            </button>
+          
+            <!-- Navbar links -->
+      
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="'nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <form class="form-inline ml-auto" id="search-form">
+                <input class="form-control mr-sm-2" type="search" id="searchQuery" placeholder="Search" aria-label="Search" color="white">
+                <button class="btn btn-outline-success my-2 my-sm-0" color="white" type="submit">Search</button>
+            </form>
+    
+            <div class="icons">
+                <a href="contact.html"> <!-- Link the icon to the contact page -->
+                    <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EJCDHFN7K7HPBCL2GACGDIOO7TE%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxNzM2MDAifQ.h6AHhlvhEIyoMFrhxHArNs5A-8rIy3R_OVzKoNGnrOCJzqUE5-YM-qt_8XcJupgk6HCtP-ULi6MM3c4itBWzsJEqGovjreggDZPg8TC2GwzsTh9D6YK5GPOFw1ME8K4FK1klgAwoa1vEQj6F3exaE4NNzZw95YOKKpa7BV4MWDARzc-4lItI2xR-Cgh-d9hAKpjM2cXXQnU-9hK1ZZInDSJcSAQ8-3lIPXwmhsJ2bJQlSoi8MtxW9WYCif6eAtwKzwjUt29ftwlaHxIufJ8Vb_yBIs9mH3O0UQ9oU9PYzvIEYMiVie09w0H4baw90ZNYAbsDmZ-aGcplmjgB-ghwi2ZSsXfTNqd6dN3vDoxoQ-xmgr-ey4uVnb6de6vE3wWR.OPbczz_fDG6N0c2mhzO9yJLiSWyPPXMOLxwf5azpnOg%26version%3DPublished&cb=63873709441&encodeFailures=1&width=30&height=30" alt="" width="20px" height="27px">
+                </a>
+                <div class="cart-icon">
+                    <a href="addcart.html">
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EKQ7PKRUEGWDFDKT7LVKYA7ZJBX%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxNzM2MDAifQ.5m31E2AvtGzmvcTN6C0jMsWtUCDM_mU2RKwm4BQ5IGNz26-HyTjfwpSOZpJP9pKPOoz9tktEM2R_tLxExDFWj9YdMdSBAxWCJxxTMwQ5k5dy03eZhlH9sRHMaUPXjLlH6KJKemoSrtqlI8GkOO0PytRBpvkaiRHlnoxWpB5O843tNYEe4urADlWPAw9oVNxw0GBOdwOh2mvvofSDV--p_2CFlmO015FFNjF7xvthhHGJCs8YSVFwqFL-vTzv04cggUFoL15l5zOLhi93QFP4P9NfbdTv7HoqXORKa0emfYFx9Bnt5aCCMdLqce7HgMrM8DwZuZP8XFhIac6qqSTbrwjVFqaas1YvfWZtHNTjs1DhuZwqJyiFKR8CzmGdEVQy.wdGmJv4pnArPRVQjhyVYEuRk6AKuMUyVqnlyNmdW3WM%26version%3DPublished&cb=63873708300&encodeFailures=1&width=66&height=66" alt="" width="30px" height="30px">
+                        <span id="cart-count" class="cart-count" text-color=white>0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+ 
+        <!-- home section -->
+        <div class="home">
+            <div class="content" data-aos="zoom-out-right">
+                <h3>
+                    <br>FluffyMuff
+                </h3>
+                <h2> <span class="changecontent"></span></h2>
+                <h7>"Fluffed with love for every bite!"
+                    <br>
+                </p>
+                <a href="menu.html" class="order-btn-link">
+                    <button class="order-btn">Order Now</button>
+                </a>
+            </div>
+            <div class="img"  data-aos="zoom-out-left">
+                <img src="https://my.microsoftpersonalcontent.com/personal/b684934760eeaee3/_layouts/15/download.aspx?UniqueId=c1b68609-b12a-4a12-b0e3-5a445675cb42&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgzMTIyMjcifQ.527OGyjoBCs_VauyITJqgb1Cl5y1RxksRL9qwgWEzzMLZvotB8ckbipqaIMUEXzsrO7KqeisiO1dSQXMfqUu_CZ7rJUFVj1-0r2-kCcrmczBG1FYYfVZnO3TOZcFt071ziC5ZUTugzZP8KH_mDmmtbdB8NL8ujfObrv-IlW4ac91sGjewNeF_lifs9fw0L9uV6QE08YoFCCVl5zpKxn09nNLv2iaA6vlK5MMNbojKptzR-nmV5BP7MDOV8NrlzU_VO6dhfmO76P8qM2nBM_cIeCGA47OlOE6SVctTcBXUbKbju-ibA9xO_uSErgR20mtgjzf_Bgz11vXY3-YVrU49_DTLBQL6Z2CFM0jxRaTaAImWxKykhlrZ6leBtCoSB9D-Lz1-0EE6RO3tBuGwzf8l5uY-82ueOp_POxJfbB_ZVw.IlWzMh-OzJclAhOcSTIwsprOiF9_plR7DD0HC0sbFnM&ApiVersion=2.0" alt="">
+            </div>
+        </div>
+        <!-- home section end -->
+
+        <!-- MP3 Section -->
+        <audio autoplay loop>
+            <source src="https://my.microsoftpersonalcontent.com/personal/b684934760eeaee3/_layouts/15/download.aspx?UniqueId=8ee3b76e-1f6e-4b3d-b5de-b09a2e77f0f5&Translate=false&tempauth=v1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgzMTIyMjcifQ.WEFtUcCh9IT-cxt4OPCCZ0vgyzry6E4TaIV91JmwOVmKbhSNZ-JgPA7V9JZQuXKPKsNUAXQGsgRjv0RLxB0FjY7P3TI81Af_tERLh1N56wy9g-hH8S6fuxv4jv7KKnX4-0jsQgEtp7ZtlLNfum8dRmTMwZEyV7Y7z8zIWihYdq24rn4rdxfIscuFqrmFXahSStVF7xkpshuIISWNmiSdpwm1zBU0O1HUVAAh_iFejBTkInnxyd74bST-CXLRG7KlpVkPh8MHpJrWUfsHHOfBbVI3VR9Ke96bBZVm41BaQAGiBvURoYL_RWmBZnRrOcEp221wSZ6ZPEPmyo5QAg-B43woosN0H3SGquaxDxZZysWdUQfr6MxhuP6EV1X8WRIG4ytZesEC8zCWhuJZzI8I7lhOyMkqpIqG0YAJhNwytLg.xmlgu8ZJXET08JiUyIQtZMJqgALMKP6J95ryIqUHLTk&ApiVersion=2.0" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>    
+<!-- MP3 Section End -->
+
+
+  <!-- footer -->
+      <footer id="footer"    data-aos="fade-up"
+      data-aos-duration="1500">
+        <h1 class="text-center">FluffyMuff</h1>
+        <p class="text-center"> Fourth Estate Subd. Brgy. San Antonio, Paranaque City, 1700</p>
+        <div class="icons text-center">
+            
+            <!-- Instagram icon with link -->
+            <a href="https://www.instagram.com/_fluffymuff?igsh=MTU1ODZtanUyeTd6Yw%3D%3D&fbclid=IwZXh0bgNhZW0CMTEAAR09GyvPmI-CFNE8gNheY89uukVANbSpkzrAHWQYBXSCby9GTNQdwNjErmY_aem_O3bgke2JcdPb_WvsHL7QOA" target="_blank">
+                <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61570648101018" target="_blank">
+                <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="mailto:Fluffymufff@gmail.com?subject=Predefined%20Subject&body=Hello,%20this%20is%20the%20body%20of%20the%20message." target="_blank">
+                <i class="bx bxl-google"></i>
+            </a>
+            <a href="https://www.tiktok.com/@fluffymufff?_t=ZS-8tEvQBdGSry&_r=1" target="_blank">
+                <i class="bx bxl-tiktok"></i>
+            </a>
+        </div>
+        <div class="copyright text-center">
+            &copy; 2024 <strong>FluffyMuff. </strong>  All Rights Reserved
+        </div>
+      </footer>
+      <!-- footer -->
+
+
+</div>
+ <!-- Arrow Button to Open Chatbot -->
+ <a href="#" class="chat" id="openChatbotBtn"><img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EMJG3UFNXFYG5CZWF3YT44VZ7NU%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxNzM2MDAifQ.duxaLs8l7tdI0qDWyvI2op6zFcSBd-_R3lBxfMf7p5RlpnfZOI_dXHw5OW4DGUY6ElJG64M8tupRkX2eFMrB6QiO6ox5XgjSMcDFc6XvdK_NYmq8KKxz-9779717jqdLoMY_OR3pJBWYu105FkJPABn3sXMPcEbVMRVQ-yaWUvGLeTCp5oer_xV2yyTSEo399NA1kUsxGs67E-WfvKEPeW816N4keteeSf1s7EQjFa5UFqtPS1hPmD5g5n8flODsgmOAsKBoej08s0SGdkzAki3NCYyp9ErsckxDVikPM6bcOFsCKSkSFAz_sFPqhezaRHaKPeFCVzYD0iUQQcpBJjtkZKrHxhbECx5JRhby9WU5_F-HM5XMJ-4fW8Emo0w1.dJMtoObfXuXZSEpdda8qDawrBWq5hW3Z66iNzXyz7tA%26version%3DPublished&cb=63873710894&encodeFailures=1&width=500&height=500" alt="" width="50px"></a>
+
+ <!-- Chatbot Modal -->
+ <div id="chatbotModal" class="chatbot-modal">
+     <div class="chatbot-modal-content">
+         <div class="chatbot-header">
+             <span id="chatbotClose" class="chatbot-close">&times;</span>
+             <h4>Chat with us!</h4>
+         </div>
+         <div class="chatbot-body">
+             <div id="chatbotMessages" class="chatbot-messages">
+                 <!-- Chat messages will appear here -->
+             </div>
+             <div class="chatbot-input">
+                 <input type="text" id="userInput" placeholder="Type a message..." />
+                 <button id="sendBtn">Send</button>
+             </div>
+         </div>
+     </div>
+
+     <script>
+
+        // Get elements for opening and closing the chatbot modal
+       const chatbotModal = document.getElementById("chatbotModal");
+       const openChatbotBtn = document.getElementById("openChatbotBtn");
+       const closeChatbotBtn = document.getElementById("chatbotClose");
+       const sendBtn = document.getElementById("sendBtn");
+       const userInput = document.getElementById("userInput");
+       const chatbotMessages = document.getElementById("chatbotMessages");
+       
+       // Open the chatbot modal when the arrow is clicked
+       openChatbotBtn.addEventListener("click", function () {
+           chatbotModal.style.display = "block";
+       });
+       
+       // Close the chatbot modal when the close button is clicked
+       closeChatbotBtn.addEventListener("click", function () {
+           chatbotModal.style.display = "none";
+       });
+       
+       // Send message function (used for both button click and Enter key press)
+       function sendMessage() {
+           const message = userInput.value.trim();
+           if (message) {
+               displayUserMessage(message); // Display user message
+               userInput.value = ""; // Clear input field
+               setTimeout(() => displayBotResponse(message), 500); // Simulate bot response
+           }
+       }
+       
+       // Send message when the button is clicked
+       sendBtn.addEventListener("click", sendMessage);
+       
+       // Send message when the Enter key is pressed
+       userInput.addEventListener("keypress", function (event) {
+           if (event.key === "Enter") {
+               event.preventDefault(); // Prevent form submission if any
+               sendMessage(); // Trigger the message send function
+           }
+       });
+       
+       // Display user message
+       function displayUserMessage(message) {
+           const messageDiv = document.createElement("div");
+           messageDiv.classList.add("user-message");
+           messageDiv.textContent = message;
+           chatbotMessages.appendChild(messageDiv);
+           chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
+       }
+       
+       // Display bot message (simple logic for now)
+       function displayBotResponse(userMessage) {
+           const botMessage = document.createElement("div");
+           botMessage.classList.add("bot-message");
+       
+           // Check for specific user questions and respond accordingly
+           if (userMessage.toLowerCase().includes("price") || userMessage.toLowerCase().includes("fee") || userMessage.toLowerCase().includes("much") || userMessage.toLowerCase().includes("cost") || userMessage.toLowerCase().includes("value") || userMessage.toLowerCase().includes("selling")) {
+               botMessage.textContent = "The prices are single - 60PHP, Combo - 120PHP, Sharing - 240PHP.";
+           } else if (userMessage.toLowerCase().includes("hello") || userMessage.toLowerCase().includes("hi")) {
+               botMessage.textContent = "Hello! How can I assist you today?"
+           } else if (userMessage.toLowerCase().includes("location") || userMessage.toLowerCase().includes("store") || userMessage.toLowerCase().includes("place")) {
+               botMessage.textContent = "Fourth Estate Subd. Brgy. San Antonio, Paranaque City, 1700";
+           } else if (userMessage.toLowerCase().includes("platform") || userMessage.toLowerCase().includes("reach") || userMessage.toLowerCase().includes("social") || userMessage.toLowerCase().includes("media") || userMessage.toLowerCase().includes("online") || userMessage.toLowerCase().includes("contact")) {
+             botMessage.textContent = "You can visit our instagram, facebook, telegram, twitter, and tiktok account for more details ";
+           } else if (userMessage.toLowerCase().includes("how") || userMessage.toLowerCase().includes("order")){
+            botMessage.textContent = "Please go to Menu Section and add to cart a muffin, then go to add to cart icon and check out. ";
+           } else if (userMessage.toLowerCase().includes("payment") || userMessage.toLowerCase().includes("COD") || userMessage.toLowerCase().includes("card") || userMessage.toLowerCase().includes("method")){
+            botMessage.textContent = "You can pay through Gcash and COD.";
+           } else if (userMessage.toLowerCase().includes("shipping") || userMessage.toLowerCase().includes("delivery")){
+            botMessage.textContent = "We offer meet up and cash on delivery";
+             } else if (userMessage.toLowerCase().includes("thank") || userMessage.toLowerCase().includes("appreciated")){
+             botMessage.textContent = "Thank you!";
+           } else {
+               botMessage.textContent = "Sorry, I didn't understand that. Can you ask something else?";
+           }
+       
+           chatbotMessages.appendChild(botMessage);
+           chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
+       }
+           </script>
+       
+       <script>
+      // Attach event listener to the form
+ document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    handleSearch(); // Call your handleSearch function
+ });
+ 
+ function handleSearch() {
+    const searchQuery = document.getElementById('searchQuery').value.trim().toLowerCase();
+    const paths = {
+        "home": "home.html",
+        "home page": "home.html",
+        "page": "home.html",
+        "about": "about.html", 
+        "about us": "about.html",
+        "mission": "about.html", 
+        "vision":"about.html", 
+        "creators": "about.html", 
+        "our creators":"about.html", 
+        "creator": "about.html",
+        "our creator": "about.html", // Assuming there's an about section in home.html
+        "contact":"contact.html", 
+        "message": "contact.html", 
+        "inquiries":"contact.html", 
+        "send message": "contact.html",
+        "menu": "Menu.html", 
+        "single":"Menu.html",
+        "single muffin":"Menu.html",
+        "combo":"Menu.html",
+        "combo muffin": "Menu.html", 
+        "sharing":"Menu.html",
+        "sharing muffin": "Menu.html", 
+        "add to cart": "Menu.html", 
+        "cart": "Menu.html", 
+        "product": "Menu.html", 
+        "products": "Menu.html",
+        "gallery":  "gallery.html",
+        "picture": "gallery.html", 
+        "image": "Menu.html", 
+        "ads": "Menu.html", 
+        "advertise": "Menu.html",
+        "advertisement": "gallery.html", 
+        "add to cart": "addcart.html",
+        "cart": "addcart.html",
+        "check out": "addcart.html",
+        "total": "addcart.html",
+        "add": "addcart.html",
+        "muffin": "Menu.html"
+        
+    };
+ 
+    if (paths[searchQuery]) {
+        if (window.location.pathname.includes(paths[searchQuery])) {
+            // Scroll to section if already on the page
+            const sectionId = searchQuery === "about" ? "about" : searchQuery;
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        } else {
+            window.location.href = paths[searchQuery];
+        }
+    } else {
+        alert('No matching section found.');
+    }
+ }
+ 
+         </script>
+       
+         <!--this is for cart-->
+       <script>
+           function addToCart(product, quantity) {
+               let cart = JSON.parse(localStorage.getItem("cart")) || [];
+               const existingProductIndex = cart.findIndex(item => item.id === product.id);
+           
+               if (existingProductIndex !== -1) {
+                   cart[existingProductIndex].quantity += parseInt(quantity);
+               } else {
+                   product.quantity = parseInt(quantity);
+                   cart.push(product);
+               }
+           
+               localStorage.setItem("cart", JSON.stringify(cart));
+               updateCartCounter();
+               showNotification(product.name);
+           }
+           
+           function updateCartCounter() {
+               let cart = JSON.parse(localStorage.getItem("cart")) || [];
+               let cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+               document.getElementById("cart-count").textContent = cartCount;
+           }
+           
+           function showNotification(productName) {
+               const notification = document.createElement("div");
+               notification.classList.add("notification");
+               notification.textContent = `${productName} has been added to your cart!`;
+               document.body.appendChild(notification);
+           
+               // Display notification
+               notification.style.display = "block";
+           
+               // Hide notification after 3 seconds
+               setTimeout(() => {
+                   notification.style.display = "none";
+                   document.body.removeChild(notification);
+               }, 3000);
+           }
+           window.onload = function() {
+               updateCartCounter();
+           };
+           
+           function showNotification(productName) {
+               const notification = document.createElement("div");
+               notification.classList.add("notification", "notification-with-arrow");
+               notification.textContent = `${productName} has been added to your cart!`;
+           
+               // Position the notification at the top of the page
+               notification.style.position = "fixed";
+               notification.style.top = "20px";  // Slightly below the top of the page
+               notification.style.left = "50%";  // Center horizontally
+               notification.style.transform = "translateX(-50%)";  // Adjust to center the notification
+           
+               document.body.appendChild(notification);
+           
+               // Display notification
+               notification.style.display = "block";
+           
+               // Hide notification after 3 seconds
+               setTimeout(() => {
+                   notification.style.display = "none";
+                   document.body.removeChild(notification);
+               }, 3000);
+           }
+           
+           </script>
+           
+        </script>
+    
+    
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+  </body>
+  </html>

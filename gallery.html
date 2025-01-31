@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluffyMuff</title>
+    <link rel="shortcut icon" type="image" href="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527ELFYXIBIRT3YBBISSJEMBWE4BIO%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.9d4cOHgERfMvmkNlcdhR6rnxxjrs84Pq9iA8s_xHrdspti4Vw_n9oUWg1Xr4Zq2FspiR43iB-Nt9Gc1caUAUnKHWdbXw8jXjsPrHtSTOH8nZdjvWS_DozGdix_zP9DoDXkhT0Dpw6JXbS8k3mtt1mVCBx9-b__zxa3o1w2eisSeWxYpV-D_eoH5sFjy0yv6zCRRHZiqlVdEC9o5XJQA84j1dPpEv53qv0qhnDkybwahocx1gPvN1dMMQt8MfvFV_i34zp7xIPuwxQ3GSAvwfQPFOr2p94RNrHC_G3Y2MO1_ZrHsICVr_xWU8-wW4TnjWUs4v0tSB2W3qnE5sLc748j7t88Y0AlKab2OLS5h0tVgr6jwwz3OKaq4CtT-wMhxz.v5WdiJ5LAxwUu1Zle1O0SQUL-DwaJZjW1NvVgtV8yKI%26version%3DPublished&cb=63873709257&encodeFailures=1&width=666&height=375">
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+    <!-- icons links -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- icons links -->
+    <!-- animation links -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- animation links -->
+</head>
+<body>
+    <div class="all-content">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md" id="navbar">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#" id="logo"><img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527ELFYXIBIRT3YBBISSJEMBWE4BIO%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.9d4cOHgERfMvmkNlcdhR6rnxxjrs84Pq9iA8s_xHrdspti4Vw_n9oUWg1Xr4Zq2FspiR43iB-Nt9Gc1caUAUnKHWdbXw8jXjsPrHtSTOH8nZdjvWS_DozGdix_zP9DoDXkhT0Dpw6JXbS8k3mtt1mVCBx9-b__zxa3o1w2eisSeWxYpV-D_eoH5sFjy0yv6zCRRHZiqlVdEC9o5XJQA84j1dPpEv53qv0qhnDkybwahocx1gPvN1dMMQt8MfvFV_i34zp7xIPuwxQ3GSAvwfQPFOr2p94RNrHC_G3Y2MO1_ZrHsICVr_xWU8-wW4TnjWUs4v0tSB2W3qnE5sLc748j7t88Y0AlKab2OLS5h0tVgr6jwwz3OKaq4CtT-wMhxz.v5WdiJ5LAxwUu1Zle1O0SQUL-DwaJZjW1NvVgtV8yKI%26version%3DPublished&cb=63873709257&encodeFailures=1&width=666&height=375" alt="" width="110px">FluffyMuff</a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span><img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EN32DFWYCY6DVGJHMWORLP3BEXI%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.gEJIV1DOiwCXmIi3lhbCDBlUaP6DRwq_ROnIhvBOj796rpjvx_l_jg7jOkoS9cVLXVd8I7peK_B2_hhi73NHoV9Ln5WoOpPLCJSzszqyR4YIy05uUEkJz6RcN93M6hk23hG8Jax1wZPUJuLsyV-QGabFci_4G-Y43kln8-a3sJf2ofm2uIJ5TQVtN4zpRZn_8pIbWOPt_WHChkr9uamO3cTEUnBOLJrogBy8cNjPEeP7szBGwqWoqjBt68f46Cyprj0Zpp1fd_stnugfnWN4Jt-aFAOqZTvSGVXuFfTveaUWiGgAGtYhFDy_d2yTmf92IheELf5qIlzawsTmL9n2B90GSjBUY2bKYFSuoCQnAEFSWzVTqk-rQZLE4gxK_YfD.Kj2HJ95DCabUDc5uKwhFVHq6D80307rYl1ysFE8FMz8%26version%3DPublished&cb=63873709332&encodeFailures=1&width=50&height=50" alt="" width="30px"></span>
+            </button>
+          
+            <!-- Navbar links -->
+      
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="'nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              <form class="form-inline ml-auto" onsubmit="return handleSearch()">
+                  <input class="form-control mr-sm-2" type="search" id="searchQuery" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              </div>
+  
+              <div class="icons">
+                <a href="contact.html"> <!-- Link the icon to the contact page -->
+                    <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EJCDHFN7K7HPBCL2GACGDIOO7TE%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.rOFCaRMvXvLmXRIUjagaBRK4qSpN_-y7o1kdwHmO5nnvGz1-O2_sfN2eDfgIwG3h7Nyiz-Y167XYIfEyEyTdSkS6UslyVfxHn23y2W9wRQIaajzQrSnGB8V8UNJI-2pJ6nYAgiGcfzla37IcbEADPznCnfu7z8XaLw1RNO4GSbvKJOxFjqVSP1UgP3_n-xTJvXVGvceF0WgZ5Y1wGfx9s_WkS8URYOTHFcZ_rGRYNwssPvf86MtMa8r2jpz99rXpFPNNrbKiQXE0vM8IMGtnQlThUGQ4SUbU-XzMDq5YSPRksPD7KoVJb2_bTYarU1aR33vvvModamq2nyMXrW9mXcxjbO2-Kw5IFq-E-xLDuSNSDHJum2JUDAhZc12uySNZ.a0x6GgX-h3eILP-Frb-hixwZ7u2C62FEjQXxQaatm9s%26version%3DPublished&cb=63873709441&encodeFailures=1&width=30&height=30" alt="" width="20px" height="27px">
+                </a>
+                <div class="cart-icon">
+                    <a href="addcart.html">
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EKQ7PKRUEGWDFDKT7LVKYA7ZJBX%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.dZ9fLTG2_DDRfziwxid_AEv-wE2rJb7ucRFextEnTMc1Wev4jPG8nsk0-VewWPa7zC1uCgiyw0s_nGvQ0s7wfVX9QIeIVoiX-pyK8gvqGRjH40aC3PwiY3u0d6aL08oXoqACrKEV1JlHTWKlwPRcjTD9hH27CG_szeRrmeuihM3QeIqxuCGlsNBov6lPqMqYQa8kmD90y2-j4rcfLSvCv2KEFDwAHppOmlfq0RDRZWFVvjofYepgDLoUnJlFIueWjxNguBS7DA1AqeFtk7mzbglM6ZgA2AL4LwaBr-CMC68-hTHHZ7jkHCKmsTbUQgC7gT9vGIyshq00ktgQFF1ZtSXZa2D9AKPpVdop89JHBfj6webtTtc7eQVgdc4grKz4.isn4mLuCAinkr2pi6JczF4RBpz5UfltAkMK05tSbiWU%26version%3DPublished&cb=63873708300&encodeFailures=1&width=66&height=66" alt="" width="30px" height="30px">
+                        <span id="cart-count" class="cart-count" text-color=white>0</span>
+                    </a>
+                </div>
+            </div>
+          </nav>
+          <!-- navbar end -->
+          
+     <!-- Banner -->
+<div class="banner">
+    <video autoplay loop muted playsinline class="video-background">
+        <source src="image/ADS.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio for background music -->
+    <audio autoplay loop class="audio-background">
+        <source src="image/ADS.mp4" type="audio/mp4">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div class="content">
+        <h3>Delightful</h3>
+        <h2>Muffin</h2>
+        <div id="btnorder">
+            <a href="menu.html" class="order-btn-link">
+                <button class="btnorder">Order Now</button>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Banner end -->
+
+        
+
+      <!--gallary section-->
+      <section id="gallary"    data-aos="fade-up"
+      data-aos-duration="1500">
+        <div class="container">
+            <h1>OUR GALLERY</h1>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">SINGLE</h3>
+                        </div>
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EK6JSVRLAILLFEZIYY7PVW53B5Z%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.Pf9hTosaZvZtqvSqiIqMPvq6tMDs34Ft1yKFlnLcwb6i42079fmarV9ZwX3bpEGAe-rXDfp6rUGPz1LPXmUGYAS2EgEZwdZAW3_6rrySSKTjWhhN6OEoR-51BOpNFiNe94u_HVtH3BhRXcrfnzec6d912vBVySx9qVhgNipAVDff1LMHFlpqtGGYuzG0CJ1gtlTcNE4NotbwiJcyeVuSYh3F1_h8U9qf-86xJvcRJNa-fB90_Qwcpu1d03-vUvdFE_CmWna7KVFK97VOQyosFdaZKmy1xHfWCLxbV_VpSAQovITilLjAdb2sIZKGWT7sx3MwFAB5jSXPIGkWv4fuyNhJvCWnyQrmAjBpIzIjH3-7gRLjLAXZlErhFDdZVD8s.uTo1ILC5XgLMyCKyKzj3L1D0HQpYkkOwd7VvwJY8yos%26version%3DPublished&cb=63873708398&encodeFailures=1&width=1234&height=926" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">DELICIOUS MUFFIN</h3>
+                        </div>
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EM6OKWMVSYUG5CLOTS7BI7VPSX5%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.pi5nK_WAabRsTWGVyzl3u9qWZ6MEp19uIM2MJXCGiOeF3fZN9KUKdeSepDrvbhGm0py3mdhyC1Hv2Zxl-d9loVxVhNrbh8JVMELGdseLtmabS12W_MCcrlSe7J0oHZRPksK8UuDibMJjUbbHD2_Vrfg_15EN0z3PRn6wnn7EMD2FpVQBSOeV6aozzoCOg-H6erA3uJZ3TYlb98zK39FloBAPzbwl1CFyj8AEIbPAg4pqgyxl6gf2W6m6Fvb9l7v9VjLmFbGjMN9N778sPHSNu7vLOcILu1i815d0PGh-WH3uS9DrQam7rLhIKLZcOzEfxrvzARcBiC5d4PcrjaqlefCOB34HJdQcD64S2N-ko1cPASATEN9BmtV9leASZ3vZ.F8NHuGBPFJpfsSa8uKFNck-QBanQ80dh4EY-M5hQ160%26version%3DPublished&cb=63873713807&encodeFailures=1&width=1234&height=926" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">SHARING</h3>
+                        </div>
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EJ3QQHZNFETXJGYIPGNHKNJV2QQ%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.wFdAi6ydXeaXiT8lg2bKXsQ3q9wpI8H7uQcG7OmUvClt7EI5b0x2pkzJUqBAh08qa-FHOy7MSX3vtGjkxJh4gIy29WYytxz3SVQYuD9QKUUyprYIIvyAIZsQqzUQ2xveaRpYB0hSK6o9xfS1xj8tU_2aYOKPgutrVu1dcGluEu8oAyYGQ0ORKM8_dYsEmkp0zt5xEg4WKDgg_UjXOGpcROXKjMehWWeTJ2dTzsbkUYE-ar-RQnKr0PeC9Mjbo7tHcqbK8IZAsDGESIT3R2NczIeKDEUzJFKUHdLqy5gufK3swbyzoxgAXYfV3sbzIzhUhR_o84KWwsMY9lhd-PzFeM6aPGfMaqI6hzuklqTN46BI4KwnLnW-4PPcREEMnFW_.0fE8fYcqnxFUw9G4JXpEqzoQW0w2rhjhiTHrnbYo8VE%26version%3DPublished&cb=63873713902&encodeFailures=1&width=1920&height=926" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 30px;"    data-aos="fade-up"
+            data-aos-duration="1500">
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">COMBO</h3>
+                        </div>
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EPYHEXRBKMTZBFI4SB2RQ3S33HE%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.SXwuKCvC3Yu4fSluDo06aKjLSAC0syzxoAdGFS3Kj49yj0P53r41ccvAwUrqaz-5cscI92qgttWbpVs8NEzQZesRy3xbjb8614D-xeMW2e8H27k0wIBhzELbe15nC8R2qYIW_apBIsY-XxCbylBKL9bcTGvCnAh8X22tvQLSVqAyL1dBWqX8n8rEpR49tQhk450C1AzpFlPSh90vzrGSDdZNAtSxHRGMICPA5A8mSbQzB0fSJhosJNZkidwBgyDDukuWuCBPvQRpCqeNvlhN15T4p2JwOcCkYmbKRyD3PRsrbI-IDRqpx7-RFviIjP538kDtMQV_1VBgRsko4_K3mrCht0AVGTTRRyYI0__20Wx3qbrA1kzWuzHl24ndO-Z6.2VvkAKI3q5zVpzfEDQtu8jBDJzcYzJ6-wSTkz2vK6wo%26version%3DPublished&cb=63873713842&encodeFailures=1&width=1234&height=926" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">BANANA MUFFIN</h3>
+                        </div>
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=jpeg&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EJPIPTHV63BYNHID7S4BLTVDH4Z%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.PCb6Zm9hlG1me6sZ4N7KEb-SunSOQ152BDrnWDwiWw7GncTDI1Z2ea1h_YwQxl26NBElUKBOII9qFtx0rpmT_qxPuSi0QBSIALHDbka-RJch4uWcZ5n7Q_Z8giqt8OjMb0cazLD-g94CdjN_xxvbt52eh4PLj9w_YNFhto-kWDwAdJM_rwWuS-ziJWOHtvuT0Ps3LtQHDjUrSqqtdijZhSXIOPjwspN87MGQPZYxmbFzoUE4XQkKsiiypZrhn89o5yS0cmi6kKM62_AMIp9g7un0DjOSYxgbI0T0NXTADwLix7M6aKk1v4J7C89HSXy5iZzH1tmjwlOoWbbUnnyzseThkZHYdsoptpMQEm1R1AqgqfJjVKCI_GTLBLmxA6nL.ckob2doKfE7GYYx0oayNGZakSf87tvNS-73vuXo_VZY%26version%3DPublished&cb=63873713802&encodeFailures=1&width=1234&height=926" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <h3 class="text-center">COMBO BOX</h3>
+                        </div>
+                        <img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527ENAQZ3EH4F5HBEKOEB6UBXFDTYD%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.HBqHMCE11gx-92WkXVTd5YUIEGGfy21_M_5I8yJFqiOdwvB0Ccv02JrISHarU4TLck-ARqBIyzd76P1lIKzjxbsG0MylVj6_2ZJovwihCNsuRBg9BCn6GFGAlWdmFfFH4kqblht3RKkA75mGsnyFT0bLoZzRyM6td8bT7Bg_XD4RApL-HBp7BDDSE-RiM9zjkgPN14P6hfwJr4UStEKainhxH9bJyJRdV7UviEwO8ymqIzAeWKgtZQtnDeoBFPAzrrpvbwEuDWiZvmGdYryxJ2KSHTOMdLoqeAmKq2U64oGtzh8oLYmp9O9lCbKNd5G2a-t4tixJzqn9jtwOzKFQ0hDyE9WxiFKN4uV7OitXEq-4MP7gkFZ6vnWASQMNGrhf.tGyZROVraa_hMEiJO72vrlFsS68ghRfhSGKw7fDVQbY%26version%3DPublished&cb=63873713826&encodeFailures=1&width=1234&height=926" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      <!-- gallary -->
+
+  <!-- footer -->
+  <footer id="footer"    data-aos="fade-up"
+  data-aos-duration="1500">
+    <h1 class="text-center">FluffyMuff</h1>
+    <p class="text-center"> Fourth Estate Subd. Brgy. San Antonio, Paranaque City, 1700</p>
+    <div class="icons text-center">
+        
+     <!-- Instagram icon with link -->
+     <a href="https://www.instagram.com/_fluffymuff?igsh=MTU1ODZtanUyeTd6Yw%3D%3D&fbclid=IwZXh0bgNhZW0CMTEAAR09GyvPmI-CFNE8gNheY89uukVANbSpkzrAHWQYBXSCby9GTNQdwNjErmY_aem_O3bgke2JcdPb_WvsHL7QOA" target="_blank">
+        <i class="bx bxl-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61570648101018" target="_blank">
+        <i class="bx bxl-facebook"></i>
+    </a>
+    <a href="mailto:Fluffymufff@gmail.com?subject=Predefined%20Subject&body=Hello,%20this%20is%20the%20body%20of%20the%20message." target="_blank">
+        <i class="bx bxl-google"></i>
+    </a>
+    <a href="https://www.tiktok.com/@fluffymufff?_t=ZS-8tEvQBdGSry&_r=1" target="_blank">
+        <i class="bx bxl-tiktok"></i>
+    </a>
+    
+    </div>
+    <div class="copyright text-center">
+        &copy; 2024 <strong>FluffyMuff. </strong>  All Rights Reserved
+    </div>
+  </footer>
+  <!-- footer -->
+
+    
+    <!-- Arrow Button to Open Chatbot -->
+ <a href="#" class="chat" id="openChatbotBtn"><img src="https://japaneast1-mediap.svc.ms/transform/thumbnail?provider=spo&farmid=196185&inputFormat=png&cs=MDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDQ4MTcxMGE0fFNQTw&docid=https%3A%2F%2Fmy.microsoftpersonalcontent.com%2F_api%2Fv2.0%2Fdrives%2Fb!eA6DhGC24EKv-7IA0JwVeqPjCqdAvrVCkUha9qjeauI8yKbyHWHuQJKRVK_0bazC%2Fitems%2F0155527EMJG3UFNXFYG5CZWF3YT44VZ7NU%3Ftempauth%3Dv1e.eyJzaXRlaWQiOiI4NDgzMGU3OC1iNjYwLTQyZTAtYWZmYi1iMjAwZDA5YzE1N2EiLCJhcHBpZCI6IjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDA0ODE3MTBhNCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9teS5taWNyb3NvZnRwZXJzb25hbGNvbnRlbnQuY29tQDkxODgwNDBkLTZjNjctNGM1Yi1iMTEyLTM2YTMwNGI2NmRhZCIsImV4cCI6IjE3MzgxMzA0MDAifQ.j2takD7VEhuZOtIjfYkUp8U20KTrXhVUSgjjn-PGsJtjGE2g2QXPZXvdBZwtFEhFjUujfG5yNWl3KO6fWil3rPiypRFhXT1JvqYgRD14N8J8SS9ziACPP7sObn6Y7nJhPWFy7ra49iW85BPZzVFuOliWCcUmmdChoi_PLbJe8fUcNxY3gC7iHOZBzG6eiPuQGPDzw1gwlLO7IdlRUX_YaN2At_Jhj7Vu4yZpJvd2PfYeNY6JaMOMcpUgjJQGPBADfud7ayHXRB1iDr5_mJPV7YkXmEZ6g2-islwFv4FqIwrRXuE08Ou5ilhxg7dgRO29X78n4gu08cBlP__-27Y9vqkPyqIUdy_44kG4-cwDZusXxen_XH8Kr69-q7VTvlrY.n9de7uML_Bbvh-L5l4kQVoT7OZem7qhFKa67frWF4Gc%26version%3DPublished&cb=63873710894&encodeFailures=1&width=500&height=500" alt="" width="50px"></a>
+
+ <!-- Chatbot Modal -->
+ <div id="chatbotModal" class="chatbot-modal">
+    <div class="chatbot-modal-content">
+        <div class="chatbot-header">
+            <span id="chatbotClose" class="chatbot-close">&times;</span>
+            <h4>Chat with us!</h4>
+        </div>
+        <div class="chatbot-body">
+            <div id="chatbotMessages" class="chatbot-messages">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Type a message..." />
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // Get elements for opening and closing the chatbot modal
+       const chatbotModal = document.getElementById("chatbotModal");
+       const openChatbotBtn = document.getElementById("openChatbotBtn");
+       const closeChatbotBtn = document.getElementById("chatbotClose");
+       const sendBtn = document.getElementById("sendBtn");
+       const userInput = document.getElementById("userInput");
+       const chatbotMessages = document.getElementById("chatbotMessages");
+       
+       // Open the chatbot modal when the arrow is clicked
+       openChatbotBtn.addEventListener("click", function () {
+           chatbotModal.style.display = "block";
+       });
+       
+       // Close the chatbot modal when the close button is clicked
+       closeChatbotBtn.addEventListener("click", function () {
+           chatbotModal.style.display = "none";
+       });
+       
+       // Send message function (used for both button click and Enter key press)
+       function sendMessage() {
+           const message = userInput.value.trim();
+           if (message) {
+               displayUserMessage(message); // Display user message
+               userInput.value = ""; // Clear input field
+               setTimeout(() => displayBotResponse(message), 500); // Simulate bot response
+           }
+       }
+       
+       // Send message when the button is clicked
+       sendBtn.addEventListener("click", sendMessage);
+       
+       // Send message when the Enter key is pressed
+       userInput.addEventListener("keypress", function (event) {
+           if (event.key === "Enter") {
+               event.preventDefault(); // Prevent form submission if any
+               sendMessage(); // Trigger the message send function
+           }
+       });
+       
+       // Display user message
+       function displayUserMessage(message) {
+           const messageDiv = document.createElement("div");
+           messageDiv.classList.add("user-message");
+           messageDiv.textContent = message;
+           chatbotMessages.appendChild(messageDiv);
+           chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
+       }
+       
+       // Display bot message (simple logic for now)
+       function displayBotResponse(userMessage) {
+           const botMessage = document.createElement("div");
+           botMessage.classList.add("bot-message");
+       
+           // Check for specific user questions and respond accordingly
+           if (userMessage.toLowerCase().includes("price") || userMessage.toLowerCase().includes("fee") || userMessage.toLowerCase().includes("much") || userMessage.toLowerCase().includes("cost") || userMessage.toLowerCase().includes("value") || userMessage.toLowerCase().includes("selling")) {
+               botMessage.textContent = "The prices are single - 60PHP, Combo - 120PHP, Sharing - 240PHP.";
+           } else if (userMessage.toLowerCase().includes("hello") || userMessage.toLowerCase().includes("hi")) {
+               botMessage.textContent = "Hello! How can I assist you today?"
+           } else if (userMessage.toLowerCase().includes("location") || userMessage.toLowerCase().includes("store") || userMessage.toLowerCase().includes("place")) {
+               botMessage.textContent = "Fourth Estate Subd. Brgy. San Antonio, Paranaque City, 1700";
+           } else if (userMessage.toLowerCase().includes("platform") || userMessage.toLowerCase().includes("reach") || userMessage.toLowerCase().includes("social") || userMessage.toLowerCase().includes("media") || userMessage.toLowerCase().includes("online") || userMessage.toLowerCase().includes("contact")) {
+             botMessage.textContent = "You can visit our instagram, facebook, telegram, twitter, and tiktok account for more details ";
+           } else if (userMessage.toLowerCase().includes("how") || userMessage.toLowerCase().includes("order")){
+            botMessage.textContent = "Please go to Menu Section and add to cart a muffin, then go to add to cart icon and check out. ";
+           } else if (userMessage.toLowerCase().includes("payment") || userMessage.toLowerCase().includes("COD") || userMessage.toLowerCase().includes("card") || userMessage.toLowerCase().includes("method")){
+            botMessage.textContent = "You can pay through Gcash and COD.";
+           } else if (userMessage.toLowerCase().includes("shipping") || userMessage.toLowerCase().includes("delivery")){
+            botMessage.textContent = "We offer meet up and cash on delivery";
+             } else if (userMessage.toLowerCase().includes("thank") || userMessage.toLowerCase().includes("appreciated")){
+             botMessage.textContent = "Thank you!";
+           } else {
+               botMessage.textContent = "Sorry, I didn't understand that. Can you ask something else?";
+           }
+       
+           chatbotMessages.appendChild(botMessage);
+           chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to the bottom
+       }
+           </script>
+       
+       <script>
+      // Attach event listener to the form
+ document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    handleSearch(); // Call your handleSearch function
+ });
+ 
+ function handleSearch() {
+    const searchQuery = document.getElementById('searchQuery').value.trim().toLowerCase();
+    const paths = {
+        "home": "home.html",
+        "home page": "home.html",
+        "page": "home.html",
+        "about": "about.html", 
+        "about us": "about.html",
+        "mission": "about.html", 
+        "vision":"about.html", 
+        "creators": "about.html", 
+        "our creators":"about.html", 
+        "creator": "about.html",
+        "our creator": "about.html", // Assuming there's an about section in home.html
+        "contact":"contact.html", 
+        "message": "contact.html", 
+        "inquiries":"contact.html", 
+        "send message": "contact.html",
+        "menu": "Menu.html", 
+        "single":"Menu.html",
+        "single muffin":"Menu.html",
+        "combo":"Menu.html",
+        "combo muffin": "Menu.html", 
+        "sharing":"Menu.html",
+        "sharing muffin": "Menu.html", 
+        "add to cart": "Menu.html", 
+        "cart": "Menu.html", 
+        "product": "Menu.html", 
+        "products": "Menu.html",
+        "gallery":  "gallery.html",
+        "picture": "gallery.html", 
+        "image": "Menu.html", 
+        "ads": "Menu.html", 
+        "advertise": "Menu.html",
+        "advertisement": "gallery.html", 
+        "add to cart": "addcart.html",
+        "cart": "addcart.html",
+        "check out": "addcart.html",
+        "total": "addcart.html",
+        "add": "addcart.html",
+        "muffin": "Menu.html"
+        
+    };
+ 
+    if (paths[searchQuery]) {
+        if (window.location.pathname.includes(paths[searchQuery])) {
+            // Scroll to section if already on the page
+            const sectionId = searchQuery === "about" ? "about" : searchQuery;
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        } else {
+            window.location.href = paths[searchQuery];
+        }
+    } else {
+        alert('No matching section found.');
+    }
+ }
+ 
+         </script>
+
+  <!--this is for cart-->
+<script>
+    function addToCart(product, quantity) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingProductIndex = cart.findIndex(item => item.id === product.id);
+    
+        if (existingProductIndex !== -1) {
+            cart[existingProductIndex].quantity += parseInt(quantity);
+        } else {
+            product.quantity = parseInt(quantity);
+            cart.push(product);
+        }
+    
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCounter();
+        showNotification(product.name);
+    }
+    
+    function updateCartCounter() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+        document.getElementById("cart-count").textContent = cartCount;
+    }
+    
+    function showNotification(productName) {
+        const notification = document.createElement("div");
+        notification.classList.add("notification");
+        notification.textContent = `${productName} has been added to your cart!`;
+        document.body.appendChild(notification);
+    
+        // Display notification
+        notification.style.display = "block";
+    
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+            notification.style.display = "none";
+            document.body.removeChild(notification);
+        }, 3000);
+    }
+    window.onload = function() {
+        updateCartCounter();
+    };
+    
+    function showNotification(productName) {
+        const notification = document.createElement("div");
+        notification.classList.add("notification", "notification-with-arrow");
+        notification.textContent = `${productName} has been added to your cart!`;
+    
+        // Position the notification at the top of the page
+        notification.style.position = "fixed";
+        notification.style.top = "20px";  // Slightly below the top of the page
+        notification.style.left = "50%";  // Center horizontally
+        notification.style.transform = "translateX(-50%)";  // Adjust to center the notification
+    
+        document.body.appendChild(notification);
+    
+        // Display notification
+        notification.style.display = "block";
+    
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+            notification.style.display = "none";
+            document.body.removeChild(notification);
+        }, 3000);
+    }
+    
+    </script>
+    
+    
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+              AOS.init();
+            </script>
+      </body>
+      </html>
